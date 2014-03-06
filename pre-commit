@@ -26,6 +26,14 @@ do
             # Check ERB template syntax
             echo -e "Validate Puppet template: \033[0;32m$puppetmodule\033[0m"
             erb -P -x -T '-' $git_root/$puppetmodule | ruby -c 2> $error_msg > /dev/null ;;
+				*.yaml )
+            echo -e "Validate YAML file: \033[0;32m$puppetmodule\033[0m"
+					  # Check YAML file syntax
+						ruby -e "require 'yaml'; YAML.parse(File.open('$puppetmodule'))" 2> $error_msg > /dev/null ;;
+				*.yml )
+            echo -e "Validate YAML file: \033[0;32m$puppetmodule\033[0m"
+					  # Check YAML file syntax
+						ruby -e "require 'yaml'; YAML.parse(File.open('$puppetmodule'))" 2> $error_msg > /dev/null ;;
     esac
     if [ $? -ne 0 ]
     then
