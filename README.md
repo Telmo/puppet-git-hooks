@@ -1,5 +1,7 @@
-## puppet-git-hooks
+### credits
+Original work by [Dr Wahl](https://github.com/drwahl) [https://github.com/drwahl/puppet-git-hooks](https://github.com/drwahl/puppet-git-hooks)
 
+## puppet-git-hooks
 
 Git hooks to assist puppet module development.  Client side hooks allow for various checks before commits are staged.  Server side hooks are provided for infrastructural reinforcement of various standarization compliance.
 
