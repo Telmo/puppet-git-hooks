@@ -39,7 +39,7 @@ gem install puppet-lint --pre
 * **--fail-on-warnings** - Return a non-zero exit status for warnings.
 * **--with-filename** - Display the filename before the warning
 * **--no-80chars-check** - Skip the 80chars check
-* **--no-double_quoted_strings-check** - Skip the double_quote_strings check
+* **--no-double\_quoted\_strings-check** - Skip the double_quote_strings check
 
 #### Fixing errors with puppet-lint
 ```
