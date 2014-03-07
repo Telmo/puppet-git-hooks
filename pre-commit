@@ -14,7 +14,7 @@ else
 fi
 
 # Get list of new/modified manifest and template files to check (in git index)
-for puppetmodule in `git diff --cached --name-only --diff-filter=ACM | grep '\.*.pp$\|\.*.erb$'`
+for puppetmodule in `git diff --cached --name-only --diff-filter=ACM | egrep '\.*.pp$|\.*.erb$|\.*.yaml$|\.*.yml$'`
 do
     # Don't check empty files
     case $puppetmodule in
